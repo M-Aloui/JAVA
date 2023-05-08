@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: white;" stylesheets="@navsidebar.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blog.GUI.AjoutPostController">
+   <children>
+      <BorderPane prefHeight="900.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Pane prefHeight="715.0" prefWidth="237.0" style="-fx-background-color: #FEC566; -fx-background-radius: 0 90 0 0;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="13.0" layoutY="75.0" prefHeight="636.0" prefWidth="211.0" spacing="50.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="282.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="326.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="292.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="retour" mnemonicParsing="false" onAction="#GoToF" prefHeight="31.0" prefWidth="350.0" styleClass="buttonFront" text="Evénement">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="30.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="304.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="241.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+         </left>
+         <top>
+            <Pane prefHeight="123.0" prefWidth="1200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="exit" layoutX="1135.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleQuitter" prefHeight="44.0" prefWidth="61.0" styleClass="buttonFront" />
+                  <ImageView fitHeight="46.0" fitWidth="51.0" layoutX="1135.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/icons8-fermer-la-fenêtre-48.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <Pane prefHeight="121.0" prefWidth="963.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="14.0" layoutY="61.0" prefHeight="46.0" prefWidth="357.0" text="Ajouter Evénement:">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="656.0" prefWidth="434.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="titleAjoutP" layoutX="250.0" layoutY="59.0" prefHeight="44.0" prefWidth="308.0" promptText="Title" AnchorPane.leftAnchor="250.0" />
+                        <TextField fx:id="descAjoutP" layoutX="250.0" layoutY="146.0" prefHeight="44.0" prefWidth="308.0" promptText="Description" AnchorPane.leftAnchor="250.0" />
+                        <Label layoutX="120.0" layoutY="64.0" prefHeight="37.0" prefWidth="67.0" text="Titre:" AnchorPane.leftAnchor="120.0">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="120.0" layoutY="157.0" prefHeight="37.0" prefWidth="112.0" text="Déscription:" AnchorPane.leftAnchor="120.0">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="ajouterP" layoutX="267.0" layoutY="499.0" mnemonicParsing="false" onAction="#ajouterF" prefHeight="58.0" prefWidth="132.0" styleClass="buttonNext" text="publier" AnchorPane.leftAnchor="200.0">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="annulerP" layoutX="489.0" layoutY="499.0" mnemonicParsing="false" onAction="#retourBlog" prefHeight="58.0" prefWidth="138.0" styleClass="buttonNext" text="Annuler" AnchorPane.leftAnchor="489.0">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="imageButton" layoutX="154.0" layoutY="393.0" mnemonicParsing="false" onAction="#getImage" styleClass="MenuButton" text="choose image" AnchorPane.leftAnchor="154.0">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="fileP" editable="false" layoutX="324.0" layoutY="393.0" prefHeight="30.0" prefWidth="240.0" promptText="File path" AnchorPane.leftAnchor="324.0" />
+                        <TextField fx:id="tfPrix" layoutX="249.0" layoutY="235.0" prefHeight="44.0" prefWidth="319.0" promptText="Prix" AnchorPane.leftAnchor="249.0" AnchorPane.topAnchor="235.0" />
+                        <Label layoutX="121.0" layoutY="235.0" prefHeight="37.0" prefWidth="67.0" text="Prix:" AnchorPane.leftAnchor="121.0">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nbrPlace" layoutX="250.0" layoutY="312.0" prefHeight="44.0" prefWidth="319.0" promptText="Nombre de place" AnchorPane.leftAnchor="250.0" />
+                        <Label layoutX="121.0" layoutY="319.0" prefHeight="37.0" prefWidth="147.0" text="Nbr de place:">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+      <Label layoutX="38.0" prefHeight="46.0" prefWidth="174.0" text="WeGym" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Calibri Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label prefHeight="25.0" prefWidth="936.0" style="-fx-border-color: #FEC566; -fx-border-width: 0 0 4 0;" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="43.0" />
+   </children>
+   <effect>
+      <DropShadow>
+         <input>
+            <InnerShadow />
+         </input>
+      </DropShadow>
+   </effect>
+</AnchorPane>

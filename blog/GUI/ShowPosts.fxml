@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blog.GUI.ShowPostsController">
+   <children>
+      <BorderPane prefHeight="900.0" prefWidth="1200.0" stylesheets="@navsidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Pane prefHeight="715.0" prefWidth="237.0" style="-fx-background-color: #FEC566; -fx-background-radius: 0 90 0 0;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="13.0" layoutY="89.0" prefHeight="636.0" prefWidth="211.0" spacing="50.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="282.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="326.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="292.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="retour" mnemonicParsing="false" onAction="#GoToF" prefHeight="31.0" prefWidth="350.0" styleClass="buttonFront" text="Evénement">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="30.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="304.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="241.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+         </left>
+         <top>
+            <Pane prefHeight="123.0" prefWidth="1200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="52.0" fitWidth="59.0" layoutX="1160.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/icons8-fermer-la-fenêtre-48.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <Pane prefHeight="121.0" prefWidth="963.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="14.0" layoutY="61.0" prefHeight="46.0" prefWidth="280.0" text="Evènements:">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </top>
+               <center>
+                  <AnchorPane fx:id="Empty" prefHeight="656.0" prefWidth="612.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                     <children>
+                        <BorderPane fx:id="borderPost" layoutX="350.0" layoutY="53.0" prefHeight="481.0" prefWidth="510.0" style="-fx-border-color: #DCDCDC; -fx-border-radius: 10; -fx-background-color: white; -fx-background-radius: 10;" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="155.0" AnchorPane.topAnchor="53.0">
+                           <bottom>
+                              <Pane prefHeight="166.0" prefWidth="445.0" style="-fx-border-color: #DCDCDC;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label fx:id="descP" alignment="TOP_LEFT" layoutY="44.0" prefHeight="116.0" prefWidth="444.0" style="-fx-border-color: #DCDCDC; -fx-border-width: 1 0 0 0;" text="Post Description" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Calibri Italic" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="commentP" layoutX="14.0" layoutY="14.0" prefHeight="23.0" prefWidth="248.0" text="Post Date">
+                                       <font>
+                                          <Font name="Calibri Bold Italic" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="rateP" alignment="CENTER_RIGHT" layoutX="299.0" layoutY="7.0" prefHeight="29.0" prefWidth="132.0" text="Label">
+                                       <font>
+                                          <Font name="Calibri Bold Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </bottom>
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <top>
+                              <Pane prefHeight="85.0" prefWidth="447.0" style="-fx-border-color: #FEC566; -fx-background-color: #FEC566;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button fx:id="titleP" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#detailP" prefHeight="48.0" prefWidth="264.0" styleClass="buttonFront" text="Post Title">
+                                       <font>
+                                          <Font name="Calibri Bold Italic" size="25.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Pane>
+                           </top>
+                           <center>
+                              <ImageView fx:id="imageP" fitHeight="368.0" fitWidth="447.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@../Image/32d58670c3f402e464f334fd9c77277b.jpg" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </center>
+                        </BorderPane>
+                        <Button fx:id="newtP" layoutX="528.0" layoutY="278.0" mnemonicParsing="false" onAction="#nextPost" prefHeight="64.0" prefWidth="61.0" styleClass="buttonNext" AnchorPane.leftAnchor="880.0" AnchorPane.topAnchor="278.0">
+                           <graphic>
+                              <ImageView fitHeight="54.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/icons8-arrow-right-64.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="PreviousP" layoutY="278.0" mnemonicParsing="false" onAction="#PreviousPost" styleClass="buttonNext" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="278.0">
+                           <graphic>
+                              <ImageView fitHeight="53.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/icons8-arrow-right-64%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="dateP" alignment="CENTER_RIGHT" layoutX="611.0" layoutY="12.0" prefHeight="23.0" prefWidth="183.0" text="Post Date" AnchorPane.leftAnchor="611.0" AnchorPane.topAnchor="12.0">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="ajoutPP" layoutX="887.0" layoutY="34.0" mnemonicParsing="false" onAction="#AjoutPost" prefHeight="25.0" prefWidth="17.0" styleClass="buttonNext" AnchorPane.leftAnchor="887.0" AnchorPane.topAnchor="34.0">
+                           <graphic>
+                              <ImageView fitHeight="41.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/icons8-plus-math-26.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="postNbr" layoutX="348.0" layoutY="3.0" text="1#">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <right>
+                  <HBox alignment="CENTER" prefHeight="628.0" prefWidth="178.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+         </center>
+      </BorderPane>
+      <Label layoutX="200.0" layoutY="43.0" prefHeight="25.0" prefWidth="1099.0" style="-fx-border-color: #FEC566; -fx-border-width: 0 0 4 0;" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="43.0" />
+      <Label prefHeight="46.0" prefWidth="174.0" text="WeGym" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Calibri Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Button fx:id="exit" mnemonicParsing="false" onAction="#handleQuitter" prefHeight="14.0" prefWidth="21.0" styleClass="buttonNext" stylesheets="@navsidebar.css" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+   <effect>
+      <DropShadow>
+         <input>
+            <InnerShadow />
+         </input>
+      </DropShadow>
+   </effect>
+</AnchorPane>

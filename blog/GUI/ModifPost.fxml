@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: white;" stylesheets="@navsidebar.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blog.GUI.ModifPostController">
+   <effect>
+      <DropShadow>
+         <input>
+            <InnerShadow />
+         </input>
+      </DropShadow>
+   </effect>
+   <children>
+      <BorderPane prefHeight="900.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Pane prefHeight="812.0" prefWidth="237.0" style="-fx-background-color: #FEC566; -fx-background-radius: 0 90 0 0;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="13.0" layoutY="75.0" prefHeight="636.0" prefWidth="211.0" spacing="50.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="282.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="326.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="292.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="retour" mnemonicParsing="false" onAction="#GoToF" prefHeight="31.0" prefWidth="350.0" styleClass="buttonFront" text="Evénement">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="30.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="304.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="241.0" styleClass="buttonFront">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+         </left>
+         <top>
+            <Pane prefHeight="123.0" prefWidth="1200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <Pane prefHeight="121.0" prefWidth="963.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="14.0" layoutY="61.0" prefHeight="46.0" prefWidth="369.0" text="Modifier Evénement:">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="690.0" prefWidth="963.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="titlemodP" layoutX="232.0" layoutY="107.0" prefHeight="44.0" prefWidth="308.0" promptText="Title" AnchorPane.leftAnchor="232.0" AnchorPane.topAnchor="107.0" />
+                        <TextField fx:id="descmodP" layoutX="232.0" layoutY="181.0" prefHeight="44.0" prefWidth="308.0" promptText="Description" AnchorPane.leftAnchor="232.0" AnchorPane.topAnchor="181.0" />
+                        <Label layoutX="98.0" layoutY="111.0" prefHeight="37.0" prefWidth="67.0" text="Titre:" AnchorPane.leftAnchor="98.0" AnchorPane.topAnchor="111.0">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="98.0" layoutY="195.0" prefHeight="37.0" prefWidth="112.0" text="Déscription:" AnchorPane.leftAnchor="98.0" AnchorPane.topAnchor="195.0">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="modiferP" layoutX="267.0" layoutY="499.0" mnemonicParsing="false" onAction="#modP" prefHeight="58.0" prefWidth="140.0" styleClass="buttonNext" text="Modifier" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="499.0">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="annulerP" layoutX="277.0" layoutY="509.0" mnemonicParsing="false" onAction="#returnDetailP" prefHeight="58.0" prefWidth="138.0" styleClass="buttonNext" text="Annuler" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="499.0">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="tfPrix" layoutX="227.0" layoutY="251.0" prefHeight="44.0" prefWidth="319.0" promptText="Prix" />
+                        <Label layoutX="98.0" layoutY="266.0" prefHeight="37.0" prefWidth="67.0" text="Prix:">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nbrPlace" layoutX="232.0" layoutY="336.0" prefHeight="44.0" prefWidth="319.0" promptText="Nombre de place" />
+                        <Label layoutX="98.0" layoutY="350.0" prefHeight="37.0" prefWidth="147.0" text="Nbr de place:">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+      <Label prefHeight="25.0" prefWidth="935.0" style="-fx-border-color: #FEC566; -fx-border-width: 0 0 4 0;" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="43.0" />
+      <Label prefHeight="46.0" prefWidth="174.0" text="WeGym" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Calibri Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Button fx:id="exit" layoutX="1133.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleQuitter" prefHeight="39.0" prefWidth="23.0" styleClass="buttonFront" />
+      <ImageView fitHeight="38.0" fitWidth="53.0" layoutX="1141.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/icons8-fermer-la-fenêtre-48.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
